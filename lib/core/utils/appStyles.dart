@@ -22,10 +22,10 @@ class AppTextStyles {
     color: Color(0xFF3C3C43),
   );
 
-  static const TextStyle buttonText = TextStyle(
-    fontFamily: 'SF Pro',
-    fontSize: 17,
-    fontWeight: FontWeight.w500,
+  static const TextStyle titleText = TextStyle(
+    fontFamily: "Shamel",
+    fontSize: 26,
+    fontWeight: FontWeight.w400,
     color: Colors.white,
   );
 
@@ -50,5 +50,15 @@ class AppTextStyles {
     height: 1.86,
     letterSpacing: 0,
     textBaseline: TextBaseline.alphabetic,
+  );
+
+
+
+
+   static const  TextStyle text16 = TextStyle(
+    fontFamily: "Shamel",
+    fontSize: 16,
+     fontWeight: FontWeight.w400,
+    color: Colors.black,
   );
 }

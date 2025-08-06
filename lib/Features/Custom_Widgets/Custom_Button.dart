@@ -1,5 +1,5 @@
-import 'package:esay_app/utils/appColors.dart';
-import 'package:esay_app/utils/appStyles.dart';
+import 'package:esay_app/core/utils/appColors.dart';
+import 'package:esay_app/core/utils/appStyles.dart';
 import 'package:flutter/material.dart';
 
 
