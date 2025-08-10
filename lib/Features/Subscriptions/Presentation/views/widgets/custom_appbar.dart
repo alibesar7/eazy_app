@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:sizer/sizer.dart';
+import 'package:esay_app/core/utils/appStyles.dart';
+import 'package:esay_app/core/utils/app_assets.dart';
+
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+  final String title;
+
+  const CustomAppBar({
+    super.key,
+    required this.title,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      centerTitle: true,
+      title: Text(
+        title,
+        style: AppTextStyles.text16.copyWith(fontSize: 18),
+      ),
+      actions: [
+        Container(
+          margin: EdgeInsets.only(right: 1.h),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            color: Colors.grey.withOpacity(.1),
+          ),
+          child: IconButton(
+            onPressed:  () => context.pop(),
+            icon: Image.asset(Assets.assetsIconsLeft),
+          ),
+        )
+      ],
+    );
+  }
+
+  @override
+  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+}

@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sizer/sizer.dart';
 
-class UpgradeTopScetion extends StatelessWidget {
-  const UpgradeTopScetion({
+class UpgradeTopSection extends StatelessWidget {
+  const UpgradeTopSection({
     super.key,
   });
 

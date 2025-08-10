@@ -8,16 +8,18 @@ environment:
   sdk: ^3.5.1
 
 dependencies:
+  cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.8
+  flutter_form_builder: ^10.1.0
+  form_builder_validators: ^11.2.0
   go_router: ^16.0.0
   sizer: ^3.0.5
 
 dev_dependencies:
+  flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
 
 flutter:
   uses-material-design: true
@@ -26,6 +28,9 @@ flutter:
     - assets/icons/
 
   fonts:
+    - family: Tajawal
+      fonts:
+        - asset: assets/fonts/Tajawal-Regular.ttf
     - family: Madani
       fonts:
         - asset: assets/fonts/alfont_com_Madani-Arabic-Regular.ttf

@@ -52,8 +52,18 @@ class AppTextStyles {
     textBaseline: TextBaseline.alphabetic,
   );
 
-
-
+static const  TextStyle textTajawal = TextStyle(
+    fontFamily: "Tajawal",
+    fontSize: 16,
+     fontWeight: FontWeight.w400,
+    color: Colors.black,
+  );
+static const  TextStyle text14 = TextStyle(
+    fontFamily: "Shamel",
+    fontSize: 14,
+     fontWeight: FontWeight.w400,
+    color: Colors.white,
+  );
 
    static const  TextStyle text16 = TextStyle(
     fontFamily: "Shamel",
