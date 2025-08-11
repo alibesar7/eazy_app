@@ -1,7 +1,6 @@
-
-import 'package:esay_app/Features/Subscriptions/Presentation/views/custom_form_text_field.dart';
+import 'package:esay_app/Features/Subscriptions/Presentation/views/widgets/custom_form_text_field.dart';
 import 'package:esay_app/Features/Subscriptions/Presentation/views/payment_view.dart';
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:sizer/sizer.dart';
 
@@ -24,6 +23,7 @@ class CustomDataCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CustomFormTextField(
+                showSpace: true,
                 name: "رقم البطاقة",
                 labelText: "*رقم البطاقة",
                 controller: cardNumberController,
@@ -41,6 +41,7 @@ class CustomDataCard extends StatelessWidget {
               children: [
                 Expanded(
                   child: CustomFormTextField(
+                      showSpace: true,
                       name: "رمز الأمان",
                       labelText: "رمز الأمان",
                       controller: cvvCodeController,
@@ -58,6 +59,7 @@ class CustomDataCard extends StatelessWidget {
                 SizedBox(width: 10),
                 Expanded(
                   child: CustomFormTextField(
+                      showSpace: true,
                       name: 'تاريخ الانتهاء',
                       labelText: "تاريخ الانتهاء",
                       controller: expDateController,
@@ -73,6 +75,7 @@ class CustomDataCard extends StatelessWidget {
               height: 4.h,
             ),
             CustomFormTextField(
+                showSpace: true,
                 name: "رمز حامل البطاقة",
                 labelText: "إسم حامل البطاقة*",
                 controller: cardHolderNameController,

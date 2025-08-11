@@ -1,5 +1,5 @@
-import 'package:esay_app/Features/Subscriptions/Presentation/views/custom_cost_card.dart';
-import 'package:esay_app/Features/Subscriptions/Presentation/views/custom_data_card.dart';
+import 'package:esay_app/Features/Subscriptions/Presentation/views/widgets/custom_cost_card.dart';
+import 'package:esay_app/Features/Subscriptions/Presentation/views/widgets/custom_data_card.dart';
 import 'package:esay_app/Features/Subscriptions/Presentation/views/widgets/custom_appbar.dart';
 import 'package:esay_app/core/utils/appStyles.dart';
 import 'package:esay_app/core/utils/app_assets.dart';

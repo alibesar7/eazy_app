@@ -1,4 +1,4 @@
-import 'package:esay_app/Features/Subscriptions/Presentation/views/subscriptions_view_body.dart';
+import 'package:esay_app/Features/Subscriptions/Presentation/views/widgets/subscriptions_view_body.dart';
 import 'package:esay_app/Features/Subscriptions/Presentation/views/widgets/custom_appbar.dart';
 import 'package:flutter/material.dart';
 

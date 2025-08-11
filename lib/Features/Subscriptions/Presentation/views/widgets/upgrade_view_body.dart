@@ -38,7 +38,7 @@ class UpgradeViewBody extends StatelessWidget {
               ),
               SliverToBoxAdapter(
                   child: CustomSubCard(
-                btnColor: Color(0xfffaf1dc),
+                onPressed: () {},
                 title: InkWell(
                   onTap: () {
                     context.push("/subscriptions");
@@ -54,6 +54,7 @@ class UpgradeViewBody extends StatelessWidget {
                 ),
                 backColor: AppColors.background,
                 borderColor: AppColors.s,
+                btnColor: Color(0xfffaf2dd),
               ))
             ],
           ),

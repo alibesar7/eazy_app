@@ -2,13 +2,11 @@ import 'package:esay_app/core/utils/appColors.dart';
 import 'package:esay_app/core/utils/appStyles.dart';
 import 'package:flutter/material.dart';
 
-
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
     this.borderColor,
     this.hintText,
-    this.hintStyle,
     this.prefixIcon,
     this.labelText,
     this.labelStyle,
@@ -26,7 +24,6 @@ class CustomTextFormField extends StatelessWidget {
   final TextStyle? labelStyle;
   final Color? borderColor;
   final String? hintText;
-  final TextStyle? hintStyle;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final TextEditingController? controller;
@@ -48,10 +45,10 @@ class CustomTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         suffixIcon: suffixIcon,
         labelText: labelText,
-        labelStyle: labelStyle ??AppTextStyles.bodyText,
+        labelStyle: labelStyle ?? AppTextStyles.bodyText,
         prefixIcon: prefixIcon,
         hintText: hintText,
-        hintStyle: hintStyle ?? AppTextStyles.bodyText,
+        hintStyle: AppTextStyles.bodyText,
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
           borderSide: BorderSide(
@@ -62,7 +59,7 @@ class CustomTextFormField extends StatelessWidget {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
           borderSide: BorderSide(
-            color: borderColor ??  AppColors.primary,
+            color: borderColor ?? AppColors.primary,
             width: 1,
           ),
         ),
