@@ -1,8 +1,12 @@
+import 'package:esay_app/Features/PersonalData/Presentation/widgets/custom_circle_avatar.dart';
+import 'package:esay_app/Features/PersonalData/Presentation/widgets/custom_modal_bottom_sheet.dart';
 import 'package:esay_app/Features/Subscriptions/Presentation/views/widgets/custom_appbar.dart';
 import 'package:esay_app/Features/Subscriptions/Presentation/views/widgets/custom_form_text_field.dart';
 import 'package:esay_app/Features/Subscriptions/Presentation/views/widgets/custom_row.dart';
+import 'package:esay_app/core/utils/appColors.dart';
 import 'package:esay_app/core/utils/appStyles.dart';
 import 'package:esay_app/core/utils/app_assets.dart';
+import 'package:esay_app/core/utils/widgets/custom_alert_dialog.dart';
 import 'package:esay_app/core/utils/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
@@ -31,32 +35,7 @@ class PersonalDetailsView extends StatelessWidget {
                   child: SizedBox(
                 height: 115,
                 width: 115,
-                child: CircleAvatar(
-                  backgroundColor: Colors.grey,
-                  child: Stack(children: [
-                    Image.asset(
-                      Assets.assetsIconsOval,
-                      height: 115,
-                      width: 115,
-                      fit: BoxFit.cover,
-                    ),
-                    Positioned(
-                        right: 5,
-                        bottom: 5,
-                        child: InkWell(
-                          onTap: () {
-                            context.push("/upgrade");
-                          },
-                          child: Container(
-                              height: 25,
-                              width: 32,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(23),
-                                  color: Colors.white),
-                              child: Image.asset(Assets.assetsIconsCamera)),
-                        ))
-                  ]),
-                ),
+                child: CustomCircleAvatar(),
               )),
               SizedBox(height: 2.h),
               CustomFormTextField(
@@ -103,7 +82,9 @@ class PersonalDetailsView extends StatelessWidget {
                     ]),
                   ]),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  context.push("/resetPassword");
+                },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -125,13 +106,47 @@ class PersonalDetailsView extends StatelessWidget {
               Spacer(flex: 1),
               CustomButton(
                 title: "حفظ التعديلات",
-                onPressed: () {},
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return CustomAlertDialog(
+                          title: "تم حفظ التعديلات بنجاح",
+                          widget1: Image.asset(Assets.assetsIconsMobilePay),
+                          widget2: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color(0xff2A72AD),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text("تم",
+                                style: AppTextStyles.text14
+                                    .copyWith(color: Colors.white)),
+                          ),
+                        );
+                      });
+                },
               ),
               SizedBox(
                 height: 1.h,
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  showModalBottomSheet(
+                    context: context,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.vertical(top: Radius.circular(30)),
+                    ),
+                    builder: (BuildContext context) {
+                      return CustomModalBottomSheet();
+                    },
+                  );
+                },
                 child: CustomRow(
                     padding: EdgeInsets.only(bottom: 10),
                     mainAxisAlignmen: MainAxisAlignment.center,

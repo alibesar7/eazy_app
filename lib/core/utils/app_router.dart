@@ -42,19 +42,19 @@ final GoRouter router = GoRouter(routes: <RouteBase>[
         return UpdatePasswordView();
       }),
   GoRoute(
-      path: 'otp',
+      path: '/otp',
       builder: (BuildContext context, GoRouterState state) {
         return OTPView();
       }),
 
 GoRoute(
-      path: '/account',
+      path: '/',
       builder: (BuildContext context, GoRouterState state) {
         return AccountView();
       }),
 
 GoRoute(
-      path: '/',
+      path: '/personalDetails',
       builder: (BuildContext context, GoRouterState state) {
         return PersonalDetailsView();
       }),

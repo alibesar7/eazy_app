@@ -2,6 +2,7 @@
 import 'package:esay_app/core/utils/appStyles.dart';
 import 'package:esay_app/core/utils/app_assets.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:sizer/sizer.dart';
 
 class CustomAccountCard extends StatelessWidget {
@@ -32,12 +33,14 @@ class CustomAccountCard extends StatelessWidget {
                       .copyWith(color: Colors.black),
                 ),
                 SizedBox(height: .5.h),
-                Row(
-                  children: [
-                    Text("  تعديل حسابي  ",
-                        style: AppTextStyles.smallText),
-                    Image.asset(Assets.assetsIconsWrite),
-                  ],
+                InkWell(onTap:(){context.push("/personalDetails");},
+                  child: Row(
+                    children: [
+                      Text("  تعديل حسابي  ",
+                          style: AppTextStyles.smallText),
+                      Image.asset(Assets.assetsIconsWrite),
+                    ],
+                  ),
                 )
               ],
             ),

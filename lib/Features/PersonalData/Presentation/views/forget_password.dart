@@ -4,6 +4,7 @@ import 'package:esay_app/core/utils/appStyles.dart';
 import 'package:esay_app/core/utils/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:go_router/go_router.dart';
 import 'package:sizer/sizer.dart';
 
 class ForgetPassword extends StatefulWidget {
@@ -67,7 +68,11 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                     },
                   ]),
               Spacer(flex: 1),
-              CustomButton(title: "تأكيد", onPressed: () {}),
+              CustomButton(
+                  title: "تأكيد",
+                  onPressed: () {
+                    context.push("/otp");
+                  }),
               SizedBox(height: 3.h)
             ],
           ),

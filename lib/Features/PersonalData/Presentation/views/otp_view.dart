@@ -4,6 +4,7 @@ import 'package:esay_app/Features/Subscriptions/Presentation/views/widgets/custo
 import 'package:esay_app/core/utils/appStyles.dart';
 import 'package:esay_app/core/utils/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:pinput/pinput.dart';
 import 'package:sizer/sizer.dart';
 
@@ -76,7 +77,11 @@ class _OTPViewState extends State<OTPView> {
                   submittedPinTheme: submittedPinTheme),
             ),
             Spacer(flex: 1),
-            CustomButton(title: "تأكيد ", onPressed: () {}),
+            CustomButton(
+                title: "تأكيد ",
+                onPressed: () {
+                  context.push("/updatePassword");
+                }),
             SizedBox(height: 2.h),
             bottomWidget(),
             SizedBox(height: 3.h),

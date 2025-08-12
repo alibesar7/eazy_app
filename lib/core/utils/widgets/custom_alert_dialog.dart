@@ -1,17 +1,16 @@
 import 'package:esay_app/core/utils/appStyles.dart';
-import 'package:esay_app/core/utils/app_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 class CustomAlertDialog extends StatelessWidget {
-  const CustomAlertDialog.CustomAlertDialog({
+  const CustomAlertDialog({
     super.key,
     required this.widget1,
-    required this.widget2,
+    required this.widget2, required this.title,
   });
   final Widget widget1;
   final Widget widget2;
-
+  final String title;
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
@@ -29,7 +28,7 @@ class CustomAlertDialog extends StatelessWidget {
               height: 1.h,
             ),
             Text(
-              "تم الدفع بنجاح",
+              title,
               style: AppTextStyles.text16,
             ),
             SizedBox(height: .5.h),

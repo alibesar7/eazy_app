@@ -100,7 +100,8 @@ class _PaymentViewState extends State<PaymentView> {
                       showDialog(
                         context: context,
                         builder: (context) {
-                          return CustomAlertDialog.CustomAlertDialog(
+                          return CustomAlertDialog(
+                            title:  "تم الدفع بنجاح",
                             widget1: Image.asset(Assets.assetsIconsMobilePay),
                             widget2: ElevatedButton(
                               style: ElevatedButton.styleFrom(
