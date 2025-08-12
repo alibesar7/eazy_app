@@ -1,14 +1,16 @@
-
 import 'package:esay_app/core/utils/appStyles.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
-    super.key, required this.title, this.onPressed,
+    super.key,
+    required this.title,
+    this.onPressed, this.btnColor,
   });
   final String title;
   final void Function()? onPressed;
+  final Color? btnColor;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -16,7 +18,7 @@ class CustomButton extends StatelessWidget {
       width: 80.h,
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Color(0xff2A72AD),
+            backgroundColor:btnColor?? Color(0xff2A72AD),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
             ),

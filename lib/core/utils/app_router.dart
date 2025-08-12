@@ -1,6 +1,7 @@
 import 'package:esay_app/Features/PersonalData/Presentation/views/account_view.dart';
 import 'package:esay_app/Features/PersonalData/Presentation/views/forget_password.dart';
 import 'package:esay_app/Features/PersonalData/Presentation/views/otp_view.dart';
+import 'package:esay_app/Features/PersonalData/Presentation/views/personal_details_view.dart';
 import 'package:esay_app/Features/PersonalData/Presentation/views/reset_password_view.dart';
 import 'package:esay_app/Features/PersonalData/Presentation/views/update_password_view.dart';
 import 'package:esay_app/Features/Subscriptions/Presentation/views/Subscriptions_view.dart';
@@ -47,12 +48,16 @@ final GoRouter router = GoRouter(routes: <RouteBase>[
       }),
 
 GoRoute(
-      path: '/',
+      path: '/account',
       builder: (BuildContext context, GoRouterState state) {
         return AccountView();
       }),
 
-
+GoRoute(
+      path: '/',
+      builder: (BuildContext context, GoRouterState state) {
+        return PersonalDetailsView();
+      }),
 
 
 

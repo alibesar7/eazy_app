@@ -47,7 +47,25 @@ class _ForgetPasswordState extends State<ForgetPassword> {
               ),
               SizedBox(height: 3.h),
               CustomFormTextField(
-                  name: 'forgetPassword', controller: forgetPasswordController),
+                  name: 'forgetPassword',
+                  controller: forgetPasswordController,
+                  validators: [
+                    (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'حقل رقم الهاتف أو البريد الإلكتروني مطلوب';
+                      }
+                      // التحقق من تنسيق البريد الإلكتروني
+                      if (RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$')
+                          .hasMatch(value)) {
+                        return null; // بريد إلكتروني صالح
+                      }
+                      // التحقق من تنسيق رقم الهاتف (10 أرقام كمثال)
+                      if (RegExp(r'^\d{10}$').hasMatch(value)) {
+                        return null; // رقم هاتف صالح
+                      }
+                      return 'يرجى إدخال بريد إلكتروني صالح أو رقم هاتف مكون من 10 أرقام';
+                    },
+                  ]),
               Spacer(flex: 1),
               CustomButton(title: "تأكيد", onPressed: () {}),
               SizedBox(height: 3.h)

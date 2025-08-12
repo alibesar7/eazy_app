@@ -4,6 +4,7 @@ import 'package:esay_app/core/utils/appStyles.dart';
 import 'package:esay_app/core/utils/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:sizer/sizer.dart';
 
 class UpdatePasswordView extends StatefulWidget {
@@ -57,18 +58,43 @@ class _UpdatePasswordViewState extends State<UpdatePasswordView> {
                     ),
                     showSpace: false,
                     hintText: "كلمة المرور الجديدة",
-                    name: '',
+                    name: 'password',
+                    validators: [
+                      FormBuilderValidators.compose([
+                        FormBuilderValidators.required(
+                            errorText: 'حقل كلمة المرور مطلوب'),
+                        FormBuilderValidators.minLength(8,
+                            errorText:
+                                'يجب أن تكون كلمة المرور 8 أحرف على الأقل'),
+                        FormBuilderValidators.match(
+                            RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])'),
+                            errorText:
+                                'يجب أن تحتوي كلمة المرور على أحرف كبيرة، صغيرة، وأرقام'),
+                      ]),
+                    ],
                     controller: newPasswordController),
                 CustomFormTextField(
-                  suffix: const Icon(
-                    Icons.remove_red_eye,
-                    color: Color(0xffc9cecf),
-                  ),
-                  showSpace: false,
-                  hintText: "أعد إدخال كلمة المرور الجديدة",
-                  name: '',
-                  controller: newPasswordAgainController,
-                ),
+                    suffix: const Icon(
+                      Icons.remove_red_eye,
+                      color: Color(0xffc9cecf),
+                    ),
+                    showSpace: false,
+                    hintText: "أعد إدخال كلمة المرور الجديدة",
+                    name: '',
+                    controller: newPasswordAgainController,
+                    validators: [
+                      FormBuilderValidators.compose([
+                        FormBuilderValidators.required(
+                            errorText: 'حقل التأكيد مطلوب'),
+                        (value) {
+                          if (value !=
+                              formKey.currentState?.fields['password']?.value) {
+                            return 'كلمات المرور غير متطابقة';
+                          }
+                          return null;
+                        },
+                      ]),
+                    ]),
                 Spacer(flex: 1),
                 CustomButton(title: "تحديث كلمة المرور", onPressed: () {}),
                 SizedBox(height: 3.h)

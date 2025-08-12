@@ -1,9 +1,13 @@
+import 'package:esay_app/Features/PersonalData/Presentation/widgets/custom_account_card.dart';
 import 'package:esay_app/Features/PersonalData/Presentation/widgets/custom_list_tile.dart';
+import 'package:esay_app/Features/PersonalData/Presentation/widgets/custom_nav_bar.dart';
+import 'package:esay_app/Features/PersonalData/Presentation/widgets/custom_upgrade_account_btn.dart';
 import 'package:esay_app/Features/Subscriptions/Presentation/views/widgets/custom_row.dart';
 import 'package:esay_app/core/utils/appColors.dart';
 import 'package:esay_app/core/utils/appStyles.dart';
 import 'package:esay_app/core/utils/app_assets.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:sizer/sizer.dart';
 
 class AccountView extends StatefulWidget {
@@ -20,31 +24,18 @@ class _AccountViewState extends State<AccountView> {
     setState(() {
       selectedIndex = index;
     });
-  }
 
-  Widget _buildNavItem({
-    required IconData icon,
-    required String text,
-    required int index,
-  }) {
-    final bool isSelected = selectedIndex == index;
-    final Color color = isSelected ? Colors.blue : Colors.black;
-
-    return InkWell(
-      onTap: () => onItemTapped(index),
-      borderRadius: BorderRadius.circular(20),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            Icon(icon, color: color),
-            const SizedBox(height: 4),
-            Text(text, style: TextStyle(color: color)),
-          ],
-        ),
-      ),
-    );
+    // switch (index) {
+    //   case 0:
+    //    context.push('/'); // متنساش تحط الصفحة هنا
+    //     break;
+    //   case 1:
+    //    context.push('/'); // متنساش تحط الصفحة هنا
+    //     break;
+    //   case 2:
+    //    context.push('/');
+    //     break;
+    // }
   }
 
   @override
@@ -54,7 +45,6 @@ class _AccountViewState extends State<AccountView> {
         padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 6.h),
         child: SingleChildScrollView(
           child: Column(
-            // mainAxisSize: MainAxisSize.min,
             children: [
               Text(
                 "حسابى",
@@ -68,72 +58,12 @@ class _AccountViewState extends State<AccountView> {
                 ],
               ),
               SizedBox(height: 4.h),
-              Container(
-                height: 110,
-                width: 355,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(19),
-                  color: Colors.grey.withOpacity(.1),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 3.w),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "محمد عمران",
-                            style: AppTextStyles.text14.copyWith(color: Colors.black),
-                          ),
-                          SizedBox(height: .5.h),
-                          Row(
-                            children: [
-                              Text("  تعديل حسابي  ", style: AppTextStyles.smallText),
-                              Image.asset(Assets.assetsIconsWrite),
-                            ],
-                          )
-                        ],
-                      ),
-                      SizedBox(width: 2.h),
-                      SizedBox(
-                        height: 120,
-                        width: 80,
-                        child: CircleAvatar(
-                          backgroundColor: Colors.grey,
-                          child: Image.asset(
-                            Assets.assetsIconsOval,
-                            height: 81,
-                            width: 81,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
+              CustomAccountCard(),
               SizedBox(height: 2.h),
               SizedBox(
                 height: 54,
                 width: 355,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xfffaf2dd),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
-                  onPressed: () {},
-                  child: CustomRow(
-                    text: " الترقية إلى النسخة المميزة   ",
-                    image: Image.asset(Assets.assetsIconsGroup),
-                    textStyle: AppTextStyles.text16.copyWith(color: AppColors.s),
-                    padding: const EdgeInsets.only(bottom: 8),
-                    mainAxisAlignmen: MainAxisAlignment.center,
-                  ),
-                ),
+                child: CustomUpgradeAccountBtn(),
               ),
               SizedBox(height: 2.h),
               CustomListTile(
@@ -167,7 +97,8 @@ class _AccountViewState extends State<AccountView> {
                   onTap: () {},
                   child: Text(
                     "تسجيل الخروج",
-                    style: AppTextStyles.text14.copyWith(color: Colors.grey.withOpacity(.5)),
+                    style: AppTextStyles.text14
+                        .copyWith(color: Colors.grey.withOpacity(.5)),
                   ),
                 ),
               )
@@ -177,28 +108,33 @@ class _AccountViewState extends State<AccountView> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => onItemTapped(0),
+        shape: CircleBorder(),
         backgroundColor: Colors.black,
         elevation: 2.0,
-        child: Icon(
-          Icons.home,
+        child: Image.asset(
+          Assets.assetsIconsHome,
           color: selectedIndex == 0 ? Colors.blueAccent : Colors.white,
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
-        notchMargin: 8.0,
+        notchMargin: 10.0,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            _buildNavItem(
-              icon: Icons.person,
+            CustomNavItem(
+              image: Assets.assetsIconsPerson,
               text: 'حسابي',
               index: 1,
+              selectedIndex: selectedIndex,
+              onItemTapped: onItemTapped,
             ),
             const SizedBox(width: 48),
-            _buildNavItem(
-              icon: Icons.book,
+            CustomNavItem(
+              selectedIndex: selectedIndex,
+              image: Assets.assetsIconsBook,
+              onItemTapped: onItemTapped,
               text: 'دروسي',
               index: 2,
             ),

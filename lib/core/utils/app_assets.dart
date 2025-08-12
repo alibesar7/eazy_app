@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_single_quotes
 class Assets {
   Assets._();
-
+  
   /// Assets for assetsIconsArrowLeft
   /// assets/icons/arrow-left.png
   static const String assetsIconsArrowLeft = "assets/icons/arrow-left.png";
@@ -18,9 +18,17 @@ class Assets {
   /// assets/icons/calls.png
   static const String assetsIconsCalls = "assets/icons/calls.png";
 
+  /// Assets for assetsIconsCamera
+  /// assets/icons/camera.png
+  static const String assetsIconsCamera = "assets/icons/camera.png";
+
   /// Assets for assetsIconsConditions
   /// assets/icons/conditions.png
   static const String assetsIconsConditions = "assets/icons/conditions.png";
+
+  /// Assets for assetsIconsDet
+  /// assets/icons/det.png
+  static const String assetsIconsDet = "assets/icons/det.png";
 
   /// Assets for assetsIconsEazy
   /// assets/icons/Eazy.png
@@ -34,9 +42,17 @@ class Assets {
   /// assets/icons/Group.png
   static const String assetsIconsGroup = "assets/icons/Group.png";
 
+  /// Assets for assetsIconsHome
+  /// assets/icons/home.png
+  static const String assetsIconsHome = "assets/icons/home.png";
+
   /// Assets for assetsIconsLeft
   /// assets/icons/left.png
   static const String assetsIconsLeft = "assets/icons/left.png";
+
+  /// Assets for assetsIconsLock
+  /// assets/icons/lock.png
+  static const String assetsIconsLock = "assets/icons/lock.png";
 
   /// Assets for assetsIconsMobilePay
   /// assets/icons/mobile-pay.png
@@ -49,6 +65,10 @@ class Assets {
   /// Assets for assetsIconsPadlock3
   /// assets/icons/padlock-3.png
   static const String assetsIconsPadlock3 = "assets/icons/padlock-3.png";
+
+  /// Assets for assetsIconsPerson
+  /// assets/icons/person.png
+  static const String assetsIconsPerson = "assets/icons/person.png";
 
   /// Assets for assetsIconsQuestions
   /// assets/icons/questions.png
@@ -68,8 +88,7 @@ class Assets {
 
   /// Assets for assetsIconsSubscriptions
   /// assets/icons/subscriptions.png
-  static const String assetsIconsSubscriptions =
-      "assets/icons/subscriptions.png";
+  static const String assetsIconsSubscriptions = "assets/icons/subscriptions.png";
 
   /// Assets for assetsIconsSurface
   /// assets/icons/surface.png
@@ -91,3 +110,4 @@ class Assets {
   /// assets/icons/write.png
   static const String assetsIconsWrite = "assets/icons/write.png";
 }
+
