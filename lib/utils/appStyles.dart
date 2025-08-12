@@ -39,6 +39,14 @@ class AppTextStyles {
     fontWeight: FontWeight.w500,
     color: Colors.white,
   );
+  static const TextStyle question=  TextStyle(
+  fontFamily: 'FFShamelFamily',
+  fontWeight: FontWeight.w400,
+  fontSize: 18,
+  height: 2.28, // line height
+  letterSpacing: 0,
+  );
+
   static const TextStyle AlertText = TextStyle(
     fontFamily: 'Shamel',
     fontSize:18,
@@ -50,6 +58,12 @@ class AppTextStyles {
     fontSize: 14,
     fontWeight: FontWeight.normal,
     color: Color(0xFF3C3C43),
+  );
+  static const TextStyle descrptionofLesson = TextStyle(
+    fontFamily: 'Shamel',
+    fontSize: 14,
+    fontWeight: FontWeight.w200,
+    color: Color(0xFFA4ACAD),
   );
 
   static const TextStyle caption = TextStyle(
@@ -66,5 +80,49 @@ class AppTextStyles {
     height: 1.86,
     letterSpacing: 0,
     textBaseline: TextBaseline.alphabetic,
+  );
+  static const TextStyle headerofLesson = TextStyle(
+    fontFamily: 'Shamel',
+    fontSize: 20,
+    color: Color(0xff141F1F),
+    fontWeight: FontWeight.w400,
+    height: 1.86,
+    letterSpacing: 0,
+    textBaseline: TextBaseline.alphabetic,
+  );
+  static const TextStyle secondheaderofLesson = TextStyle(
+    fontFamily: 'Shamel',
+    fontSize: 16,
+    color: Color(0xff141F1F),
+    fontWeight: FontWeight.w400,
+    height: 1.86,
+    letterSpacing: 0,
+    textBaseline: TextBaseline.alphabetic,
+  );
+  static const TextStyle graynumberq = TextStyle(
+    fontFamily: 'Shamel',
+    fontSize: 12,
+    color: Color(0xff8C8C8C),
+    fontWeight: FontWeight.w400,
+    height: 1.86,
+    letterSpacing: 0,
+    textBaseline: TextBaseline.alphabetic,
+  );
+  static const TextStyle  blue14 = TextStyle(
+    fontFamily: 'Shamel',
+    fontSize: 14,
+    color: Color(0xff2A72AD),
+  );
+  static const TextStyle black14 = TextStyle(
+    fontFamily: 'Shamel',
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    height: 1.47,
+    color: Colors.black,
+    letterSpacing: 0,
+  );
+  static const TextStyle  orange14= TextStyle(
+    fontSize: 14,
+    color: Color(0xffF28D1C),
   );
 }

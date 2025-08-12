@@ -1,4 +1,6 @@
+import 'package:esay_app/Features/LessonsScreen/LessonDetails/LessonsDetails.dart';
 import 'package:esay_app/Features/LessonsScreen/lessonScreen.dart';
+import 'package:esay_app/Features/QiuzScreen/QuizView.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -30,6 +32,8 @@ class EazyApp extends StatelessWidget {
       },
       initialRoute: Lessonscreen.routeScreen,
       routes: {
+        QuizScreen.routeScreen:(context)=>QuizScreen(),
+        Lessonsdetails.routeScreen:(context)=>Lessonsdetails(),
         Lessonscreen.routeScreen: (context) => Lessonscreen(),
       },
     );

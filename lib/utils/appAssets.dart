@@ -1,4 +1,5 @@
 class AppAssets {
+ static const String succes="assets/images/success.png";
  static const String arrowIcon = "assets/images/Chevron Left.png";
  static const String grammer = "assets/images/grammerphoto.png";
  static const String saveicon = "assets/images/Save.png";
@@ -12,4 +13,5 @@ class AppAssets {
  static const String assetsIconsUnlocked = "assets/icons/unlocked.png";
  static const String assetsIconsVector = "assets/icons/Vector.png";
  static const String errorDilog="assets/images/Error.png";
+ static const String eye="assets/images/eye 11.png";
 }

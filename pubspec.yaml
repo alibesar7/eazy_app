@@ -64,6 +64,8 @@ flutter:
     - assets/images/
     - assets/images/Save.png
     - assets/icons/
+    - assets/images/success.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -83,6 +85,9 @@ flutter:
     - family: Shamel
       fonts:
         - asset: assets/fonts/FFShamelFamily-SansOneBold.ttf
+    - family: FFShamelFamily
+      fonts:
+            - asset: assets/fonts/FFShamelFamily-SansOneBook.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:

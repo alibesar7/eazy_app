@@ -1,4 +1,6 @@
+import 'package:esay_app/Features/LessonsScreen/LessonDetails/LessonsDetails.dart';
 import 'package:esay_app/Features/LessonsScreen/UpgradeScreen/Upgrade_view.dart';
+import 'package:esay_app/Features/QiuzScreen/QuizView.dart';
 import 'package:flutter/material.dart';
 import 'package:quickalert/models/quickalert_type.dart';
 import 'package:quickalert/widgets/quickalert_dialog.dart';
@@ -30,9 +32,14 @@ class _CustomlisttileState extends State<Customlisttile> {
           borderRadius: BorderRadius.circular(20),
         ),
         child: ListTile(
-          title: Text(
-            "الدرس الأول",
-            style:   AppTextStyles.caption.copyWith(color: Colors.grey)),
+          title: InkWell(
+            onTap: (){
+              Navigator.pushNamed(context, Lessonsdetails.routeScreen);
+              },
+            child: Text(
+              "الدرس الأول",
+              style:   AppTextStyles.caption.copyWith(color: Colors.grey)),
+          ),
           subtitle: Text(
             "الفرق بين {a-an}",
             style:  AppTextStyles.text16,
@@ -73,10 +80,15 @@ class _CustomlisttileState extends State<Customlisttile> {
                 ),
 
               SizedBox(width: w * 0.02),
-              Image.asset(
-                AppAssets.saveWhiteicon,
-                width: w * 0.1,
-                height: h * 0.09,
+              InkWell(
+                onTap: (){
+                  Navigator.pushNamed(context, QuizScreen.routeScreen);
+                },
+                child: Image.asset(
+                  AppAssets.saveWhiteicon,
+                  width: w * 0.1,
+                  height: h * 0.09,
+                ),
               ),
             ],
           )
