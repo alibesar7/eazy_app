@@ -1,3 +1,4 @@
+import 'package:esay_app/Features/PersonalData/Presentation/views/account_view.dart';
 import 'package:esay_app/Features/PersonalData/Presentation/views/forget_password.dart';
 import 'package:esay_app/Features/PersonalData/Presentation/views/otp_view.dart';
 import 'package:esay_app/Features/PersonalData/Presentation/views/reset_password_view.dart';
@@ -40,8 +41,21 @@ final GoRouter router = GoRouter(routes: <RouteBase>[
         return UpdatePasswordView();
       }),
   GoRoute(
-      path: '/',
+      path: 'otp',
       builder: (BuildContext context, GoRouterState state) {
         return OTPView();
       }),
+
+GoRoute(
+      path: '/',
+      builder: (BuildContext context, GoRouterState state) {
+        return AccountView();
+      }),
+
+
+
+
+
+
+
 ]);

@@ -1,3 +1,4 @@
+import 'package:esay_app/core/utils/appColors.dart';
 import 'package:flutter/material.dart';
 
 class AppTextStyles {
@@ -8,18 +9,25 @@ class AppTextStyles {
     color: Color(0xFF1D1D1F),
   );
 
-  static const TextStyle sectionHeader = TextStyle(
+  static const TextStyle numberText = TextStyle(
     fontFamily: 'SF Pro',
-    fontSize: 22,
+    fontSize: 20,
     fontWeight: FontWeight.w500,
-    color: Color(0xFF1D1D1F),
+    color: AppColors.primary,
   );
 
-  static const TextStyle bodyText = TextStyle(
+  static TextStyle smallText = TextStyle(
+    fontFamily: 'Shamel',
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    color: Color(0xff2A72AD),
+  );
+
+  static TextStyle bodyText = TextStyle(
     fontFamily: 'SF Pro',
-    fontSize: 16,
-    fontWeight: FontWeight.normal,
-    color: Color(0xFF3C3C43),
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    color: Colors.black,
   );
 
   static const TextStyle titleText = TextStyle(
@@ -36,9 +44,16 @@ class AppTextStyles {
     color: Color(0xFF3C3C43),
   );
 
+  static const TextStyle tileTiltle = TextStyle(
+    fontFamily: 'Shamel',
+    fontSize: 14,
+    fontWeight: FontWeight.w200,
+    color: Colors.black,
+  );
+
   static const TextStyle caption = TextStyle(
     fontFamily: 'SF Pro',
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: FontWeight.w300,
     color: Color(0xFF636366),
   );
@@ -52,23 +67,23 @@ class AppTextStyles {
     textBaseline: TextBaseline.alphabetic,
   );
 
-static const  TextStyle textTajawal = TextStyle(
+  static const TextStyle textTajawal = TextStyle(
     fontFamily: "Tajawal",
     fontSize: 16,
-     fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w400,
     color: Colors.black,
   );
-static const  TextStyle text14 = TextStyle(
+  static const TextStyle text14 = TextStyle(
     fontFamily: "Shamel",
     fontSize: 14,
-     fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w400,
     color: Colors.white,
   );
 
-   static const  TextStyle text16 = TextStyle(
+  static const TextStyle text16 = TextStyle(
     fontFamily: "Shamel",
     fontSize: 16,
-     fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w400,
     color: Colors.black,
   );
 }
