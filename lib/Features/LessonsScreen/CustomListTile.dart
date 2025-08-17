@@ -34,7 +34,7 @@ class _CustomlisttileState extends State<Customlisttile> {
         child: ListTile(
           title: InkWell(
             onTap: (){
-              Navigator.pushNamed(context, Lessonsdetails.routeScreen);
+             Navigator.push(context, MaterialPageRoute(builder: (context)=>Lessonsdetails()));
               },
             child: Text(
               "الدرس الأول",
@@ -82,7 +82,7 @@ class _CustomlisttileState extends State<Customlisttile> {
               SizedBox(width: w * 0.02),
               InkWell(
                 onTap: (){
-                  Navigator.pushNamed(context, QuizScreen.routeScreen);
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>QuizScreen()));
                 },
                 child: Image.asset(
                   AppAssets.saveWhiteicon,

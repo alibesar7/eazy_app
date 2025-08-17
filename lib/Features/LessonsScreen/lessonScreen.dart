@@ -5,15 +5,15 @@ import 'package:esay_app/utils/appColors.dart';
 import 'package:esay_app/utils/appStyles.dart';
 import 'package:flutter/material.dart';
 
-class Lessonscreen extends StatefulWidget {
-  const Lessonscreen({super.key});
+class Lessonscreens extends StatefulWidget {
+  const Lessonscreens({super.key});
   static const String routeScreen = "LessonScreen";
 
   @override
-  State<Lessonscreen> createState() => _LessonscreenState();
+  State<Lessonscreens> createState() => _LessonscreenState();
 }
 
-class _LessonscreenState extends State<Lessonscreen> {
+class _LessonscreenState extends State<Lessonscreens> {
   bool sub=false;
   @override
   Widget build(BuildContext context) {
