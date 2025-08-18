@@ -2,7 +2,10 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:sizer/sizer.dart';
 
+import '../../../../utils/appAssets.dart';
 import '../../../../utils/appStyles.dart';
 
 class CustomAccountCard extends StatelessWidget {

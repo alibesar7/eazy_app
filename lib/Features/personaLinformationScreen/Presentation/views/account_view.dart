@@ -7,6 +7,13 @@ import 'package:sizer/sizer.dart';
 import '../../../../utils/appAssets.dart';
 import '../../../../utils/appAssets.dart';
 import '../../../../utils/appStyles.dart';
+import '../../../LessonsScreen/UpgradeScreen/Upgrade_view.dart';
+import '../../../Other/common_questions.dart';
+import '../../../Other/contact_us.dart';
+import '../../../Other/log_out_q.dart';
+import '../../../Other/share_app..dart';
+import '../../../Other/terms_and_condition.dart';
+import '../../../SubscriptionsScreens/Presentation/views/Subscriptions_view.dart';
 import '../widgets/custom_account_card.dart';
 import '../widgets/custom_list_tile.dart';
 import '../widgets/custom_nav_bar.dart';
@@ -69,34 +76,51 @@ class _AccountViewState extends State<AccountView> {
               ),
               SizedBox(height: 2.h),
               CustomListTile(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>UpgradeView()));
+
+                },
                 tilte: "الاشتراكات",
                 leading: Image.asset(AppAssets.assetsIconsSubscriptions),
               ),
               CustomListTile(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>CommonQuestions()));
+
+                },
                 tilte: "الأسئلة الشائعة",
                 leading: Image.asset(AppAssets.assetsIconsQuestions),
               ),
               CustomListTile(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>TermsAndCondition()));
+                },
                 tilte: "الشروط والأحكام",
                 leading: Image.asset(AppAssets.assetsIconsConditions),
               ),
               CustomListTile(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ContactUs()));
+
+                },
                 tilte: "تواصل معانا",
                 leading: Image.asset(AppAssets.assetsIconsCalls),
               ),
               CustomListTile(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ShareApp()));
+
+                },
                 tilte: "مشاركة التطبيق",
                 leading: Image.asset(AppAssets.assetsIconsShares),
               ),
               SizedBox(height: 1.h),
               Center(
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>LogOut()));
+
+                  },
                   child: Text(
                     "تسجيل الخروج",
                     style: AppTextStyles.text16

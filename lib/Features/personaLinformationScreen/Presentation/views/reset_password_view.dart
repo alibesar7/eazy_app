@@ -1,12 +1,14 @@
-import 'package:esay_app/Features/Subscriptions/Presentation/views/widgets/custom_appbar.dart';
-import 'package:esay_app/Features/Subscriptions/Presentation/views/widgets/custom_form_text_field.dart';
-import 'package:esay_app/core/utils/appStyles.dart';
-import 'package:esay_app/core/utils/widgets/custom_button.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sizer/sizer.dart';
+
+import '../../../../utils/appStyles.dart';
+import '../../../../utils/widget/custom_button.dart';
+import '../../../SubscriptionsScreens/Presentation/views/widgets/custom_appbar.dart';
+import '../../../SubscriptionsScreens/Presentation/views/widgets/custom_form_text_field.dart';
 
 class ResetPasswordView extends StatelessWidget {
   ResetPasswordView({super.key});

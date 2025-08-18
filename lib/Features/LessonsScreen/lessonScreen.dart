@@ -60,7 +60,7 @@ class _LessonscreenState extends State<Lessonscreens> {
                           text: "ابدأ الدرس الاول",
                           textStyle: AppTextStyles.text16.copyWith(
                             color: Colors.white
-                          ),
+                          ), title: '',
                         ),
                       ),
                     ),

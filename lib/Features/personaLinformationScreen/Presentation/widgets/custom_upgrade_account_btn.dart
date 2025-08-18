@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../../../../utils/appAssets.dart';
 import '../../../../utils/appColors.dart';
 import '../../../../utils/appStyles.dart';
+import '../../../SubscriptionsScreens/Presentation/views/widgets/custom_row.dart';
 
 class CustomUpgradeAccountBtn extends StatelessWidget {
   const CustomUpgradeAccountBtn({

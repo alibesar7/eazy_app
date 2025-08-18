@@ -18,7 +18,7 @@ class CustomTextFormField extends StatelessWidget {
     this.validator,
     this.obscureText = false,
     this.keyboardType,
-    this.onChanged,
+    this.onChanged,  String ?name,  List<String? Function(dynamic value)> ?validators,   bool? showSpace,
   });
 
   final int? maxline;

@@ -2,6 +2,7 @@ import 'package:esay_app/Features/LessonsScreen/lessonScreen.dart';
 import 'package:esay_app/Features/homeScreen/HomeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../otp/view/otp_view.dart';
 import '../controller/login_controller.dart';
 
 class LoginView extends StatelessWidget {
@@ -104,12 +105,17 @@ class LoginView extends StatelessWidget {
                         alignment: Alignment.centerLeft,
                         child: TextButton(
                           onPressed: controller.onForgotPassword,
-                          child: const Text(
-                            'نسيت كلمة المرور؟',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontFamily: 'Cairo',
+                          child: InkWell(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>OtpView()));
+                            },
+                            child: const Text(
+                              'نسيت كلمة المرور؟',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontFamily: 'Cairo',
+                              ),
                             ),
                           ),
                         ),

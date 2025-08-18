@@ -28,7 +28,7 @@ class CustomListTile extends StatelessWidget {
               padding: const EdgeInsets.only(top: 3),
               child: Text(
                 tilte,
-                style: AppTextStyles.tileTiltle,
+                style: AppTextStyles.titleText.copyWith(color: Colors.black,fontSize: 16),
               ),
             ),
             trailing: Image.asset(

@@ -1,8 +1,15 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:go_router/go_router.dart';
+import 'package:sizer/sizer.dart';
 
 import '../../../../utils/appStyles.dart';
+import '../../../../utils/widget/custom_button.dart';
+import '../../../Custom_Widgets/CustomTextFeild.dart';
+import '../../../Custom_Widgets/Custom_Button.dart';
+import '../../../SubscriptionsScreens/Presentation/views/widgets/custom_appbar.dart';
 
 class ForgetPassword extends StatefulWidget {
   ForgetPassword({super.key});
@@ -44,7 +51,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                 ),
               ),
               SizedBox(height: 3.h),
-              CustomFormTextField(
+              CustomTextFormField(
                   name: 'forgetPassword',
                   controller: forgetPasswordController,
                   validators: [

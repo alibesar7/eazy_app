@@ -41,8 +41,7 @@ dependencies:
   flutter_form_builder:
   form_builder_validators:
   go_router:
-  pinput:
-
+  pinput: 2.2.20
   sizer:
 
   # The following adds the Cupertino Icons font to your application.

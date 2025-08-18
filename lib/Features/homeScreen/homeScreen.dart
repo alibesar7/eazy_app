@@ -10,6 +10,8 @@ import '../LessonsScreen/lessonScreen.dart';
 import '../Mylesson/lessonScreen.dart';
 import '../Mylesson/no_lesson_screen.dart';
 import '../NotificatonsScreen/notificationScreen.dart';
+import '../personaLinformationScreen/Presentation/views/account_view.dart';
+import '../personaLinformationScreen/Presentation/views/personal_details_view.dart';
 import 'all_catagories.dart';
 import 'search_found_result.dart';
 
@@ -369,7 +371,7 @@ class HomeScreen extends StatelessWidget {
                   iconPath: 'assets/images/acc.png',
                   label: 'حسابي',
                   category: 'حسابي',
-                  destination: NoLessonScreen(),
+                  destination: AccountView(), // تعديل هنا
                 ),
                 const SizedBox(width: 40),
                 _buildBottomNavItem(
